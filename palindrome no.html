@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Number</title>
+</head>
+<body>
+    <script>
+        let n = Number(prompt("Enter a number:"));
+        let original = n;
+        let remainder;
+        let reverse = 0;
+
+        while (n != 0) {
+            remainder = n % 10;
+            reverse = reverse * 10 + remainder;
+            n = Math.floor(n / 10);
+        }
+
+        if (original == reverse) {
+            document.write("It is a palindrome");
+        } else {
+            document.write("It is not a palindrome");
+        }
+    </script>
+</body>
+</html>
