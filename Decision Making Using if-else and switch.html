@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Result</title>
+</head>
+<body>
+    <h2>Student Result Analysis</h2>
+    <div id="result"></div>
+
+    <script>
+        let score = 85;
+        let category;
+
+        if (score >= 90)
+            category = "Distinction";
+        else if (score >= 75)
+            category = "First Class";
+        else if (score >= 60)
+            category = "Second Class";
+        else if (score >= 40)
+            category = "Pass";
+        else
+            category = "Fail";
+
+        let message;
+
+        switch (category) {
+            case "Distinction":
+                message = "Outstanding Performance";
+                break;
+            case "First Class":
+                message = "Very Good Performance";
+                break;
+            case "Second Class":
+                message = "Good Performance";
+                break;
+            case "Pass":
+                message = "Successfully Passed";
+                break;
+            default:
+                message = "Better Preparation Required";
+        }
+
+        document.getElementById("result").innerHTML =
+            "Student Score: " + score +
+            "<br>Category: " + category +
+            "<br>Message: " + message;
+    </script>
+</body>
+</html>
