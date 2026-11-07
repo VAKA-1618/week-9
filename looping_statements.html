@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop Demonstration</title>
+</head>
+<body>
+    <h2>Square Numbers Using for Loop</h2>
+    <div id="squares"></div>
+
+    <h2>Even Numbers Using while Loop</h2>
+    <div id="evens"></div>
+
+    <h2>Countdown Using do-while Loop</h2>
+    <div id="countdown"></div>
+
+    <script>
+        let squareOutput = "";
+
+        for (let n = 1; n <= 5; n++) {
+            squareOutput += n + " squared = " +
+                            (n * n) + "<br>";
+        }
+
+        document.getElementById("squares").innerHTML =
+            squareOutput;
+
+        let evenOutput = "";
+        let number = 2;
+
+        while (number <= 10) {
+            evenOutput += number + " ";
+            number += 2;
+        }
+
+        document.getElementById("evens").innerHTML =
+            evenOutput;
+
+        let countOutput = "";
+        let count = 3;
+
+        do {
+            countOutput += count + " ";
+            count--;
+        } while (count >= 1);
+
+        document.getElementById("countdown").innerHTML =
+            countOutput;
+    </script>
+</body>
+</html>
